@@ -1,7 +1,7 @@
 # test.py
 
 Example class that generates a badge for a user.
-The result is saved in `../result.png`.
+The result is saved in `results/result.png`.
 
 ```py
 iBadgeCreator = badgeCreator.BadgeCreator()

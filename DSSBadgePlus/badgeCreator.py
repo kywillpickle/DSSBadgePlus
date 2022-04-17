@@ -22,7 +22,7 @@ class BadgeCreator:
         '''
         pass
     # Generate a badge given a user's info, survey results, and today's date
-    def generateBadge(self, name="", surveyResults=SurveyResults.NOT_APPROVED, photo=None):
+    def generateBadge(self, name="", surveyResults=SurveyResults.NOT_APPROVED, photo=""):
         ''' An enumerator containing all possible Daily Symptom Survey results.
 
             :param name: A str representing a user's preferred full name on Health E-Messaging
@@ -39,7 +39,7 @@ class BadgeCreator:
 
             :return: a PIL.Image object representing the generated seal
         '''
-        seed = random.seed(str(date.today()))
+        random.seed(str(date.today()))
         colorSwitch = {
             0: "coral",
             1: "cyan",
@@ -53,7 +53,7 @@ class BadgeCreator:
             9: "yellowgreen"
         }
         sealColor = Color(colorSwitch.get(random.randint(0,9)))
-        seed = random.seed(str(seed))
+        random.seed(str(date.today())+"_")
         patternSwitch = {
             0: "DSSBadgePlus/assets/seals/eye.png",
             1: "DSSBadgePlus/assets/seals/face-smile.png",
