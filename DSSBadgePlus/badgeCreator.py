@@ -9,6 +9,7 @@
 from DSSBadgePlus.badge import Badge as badge, SurveyResults
 from datetime import datetime, date
 import random
+import os
 from colour import Color
 from PIL import Image
 import numpy as np
@@ -54,19 +55,12 @@ class BadgeCreator:
         }
         sealColor = Color(colorSwitch.get(random.randint(0,9)))
         random.seed(str(date.today())+"_")
-        patternSwitch = {
-            0: "DSSBadgePlus/assets/seals/eye.png",
-            1: "DSSBadgePlus/assets/seals/face-smile.png",
-            2: "DSSBadgePlus/assets/seals/gem.png",
-            3: "DSSBadgePlus/assets/seals/hand-peace.png",
-            4: "DSSBadgePlus/assets/seals/heart.png",
-            5: "DSSBadgePlus/assets/seals/hourglass.png",
-            6: "DSSBadgePlus/assets/seals/moon.png",
-            7: "DSSBadgePlus/assets/seals/snowflake.png",
-            8: "DSSBadgePlus/assets/seals/star.png",
-            9: "DSSBadgePlus/assets/seals/sun.png"
-        }
-        img = Image.open(patternSwitch.get(random.randint(0,9)))
+        patternSwitch = dict()
+        dictIndx = 0
+        for i in os.listdir("DSSBadgePlus/assets/seals/"):
+            if i.endswith(".png") or i.endswith(".jpg") or i.endswith(".jpeg"): patternSwitch[dictIndx] = i
+            dictIndx+=1
+        img = Image.open("DSSBadgePlus/assets/seals/"+str(patternSwitch.get(random.randint(0,dictIndx-1))))
         data = np.array(img)   # "data" is a height x width x 4 numpy array
         red, green, blue, alpha = data.T # Temporarily unpack the bands for readability
 

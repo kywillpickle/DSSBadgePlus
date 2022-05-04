@@ -1,2 +1,4 @@
+.vscode/
 test/results/*
 test/photos/*
+DSSBadgePlus/__pycache__/

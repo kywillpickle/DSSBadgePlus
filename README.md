@@ -1,5 +1,8 @@
-# DSSBadgePlus
-Revamp of UC Davis Campus Ready's Daily Symptom Survey, intended to be less prone to tampered survey results.
+# DSSBadge+
+**DSSBadge+** is a revamp of UC Davis Campus Ready's [Daily Symptom Survey](https://campusready.ucdavis.edu/symptom-survey), intended to be less prone to tampered survey results. It was submitted to [Devpost](https://devpost.com/software/dssbadge) as part of the HackDavis2022 hackathon.
+
+## Usage
+**DSSBadge+** is a python package library made to be as simple as possible for developer use. We have provided extensive documentation on each class in the [docs/](https://github.com/kywillpickle/DSSBadgePlus/tree/develop/docs) folder. See the [test/](https://github.com/kywillpickle/DSSBadgePlus/tree/develop/test) folder for an example of where to start.
 
 ## Background
 _What is a **DSS**?_
