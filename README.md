@@ -1,5 +1,6 @@
 # DSSBadge+
 **DSSBadge+** is a revamp of UC Davis Campus Ready's [Daily Symptom Survey](https://campusready.ucdavis.edu/symptom-survey), intended to be less prone to tampered survey results. It was submitted to [Devpost](https://devpost.com/software/dssbadge) as part of the HackDavis2022 hackathon.
+
 ![Slide 1](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/909/279/datas/gallery.jpg)
 
 ## Usage
